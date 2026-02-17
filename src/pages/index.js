@@ -4,15 +4,11 @@ import Image from "next/image";
 
 export default function Home() {
 
-  const numero = 42;
-  const nome = "Luca";
+  const numeri = [1, 2, 4, 8];
 
-  function raddoppia(numero) {
-    return numero * 2;
+  function getNumbersList() {
+    return numeri.map(numero => <li>{numero}</li>)
   }
-
-  const x = [1, 22, 333];
-  const y = { nome: "Luca" };
 
   return (
     <>
@@ -24,15 +20,7 @@ export default function Home() {
       </Head>
       <div>
         <h1>Hello Next World!</h1>
-        <h2>Benvenuto, {nome}</h2>
-        <h3>Il tuo numero è {numero}</h3>
-        <ul>
-          <li>{raddoppia(2)}</li>
-          <li>{raddoppia(4)}</li>
-          <li>{raddoppia(8)}</li>
-          <li>{raddoppia(16)}</li>
-        </ul>
-        <p>{x.join(", ")}</p>
+        <ul>{getNumbersList()}</ul>
       </div>
     </>
   );
