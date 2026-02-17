@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  background-image: url('/mountains.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+header,
+footer {
+  padding: 1rem;
+  background: #EEE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 3rem;
+}
+
+header h1 {
+  display: inline;
+}

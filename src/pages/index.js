@@ -1,14 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 // import styles from "@/styles/Home.module.css";
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
+import Products from "@/components/Products"
 
 export default function Home() {
-
-  const numeri = [1, 2, 4, 8];
-
-  function getNumbersList() {
-    return numeri.map(numero => <li>{numero}</li>)
-  }
 
   return (
     <>
@@ -18,10 +15,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-        <h1>Hello Next World!</h1>
-        <ul>{getNumbersList()}</ul>
-      </div>
+      <Header />
+      <main>
+        <Products />
+      </main>
+      <Footer />
     </>
   );
 }
