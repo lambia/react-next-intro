@@ -87,6 +87,7 @@ export default function Products() {
 		},
 	];
 
+	// Render function che crea un array, itera con ciclo for.of e popola array con elementi html
 	// function getCards() {
 	// 	let cards = [];
 
@@ -97,14 +98,33 @@ export default function Products() {
 	// 	return cards;
 	// }
 
-	const cards = products.map(prodotto => <div>{prodotto.title}</div>);
+	// Render function che restituisce direttamente il return di un map
+	// function getCards() {
+	// 	return products.map(prodotto => <div className="product-card">
+	// 		<h3>{prodotto.title}</h3>
+	// 		<img className="product-card-img" src={prodotto.src} alt={prodotto.title} />
+	// 		<p>Pasta {prodotto.type} da {prodotto.time} minuti</p>
+	// 	</div>)
+	// }
+
+	// Salvo il return di un map in un array d'appoggio per riutilizzo in componente
+	// const cards = products.map(prodotto => <div>{prodotto.title}</div>);
 
 	return <div>
 		<h2>I nostri prodotti</h2>
 		<div className="products-list">
+
+			{/* Stampiamo le card tramite render function che restituisce array di elementi html*/}
 			{/* {getCards()} */}
-			{/* {products.map(prodotto => <div>{prodotto.title}</div>)} */}
-			{cards}
+
+			{/* Stampiamo tramite variabile d'appoggio (generata iterando) che contiene array di elementi html */}
+			{/* {cards} */}
+
+			{products.map(prodotto => <div className="product-card">
+				<h3>{prodotto.title}</h3>
+				<img className="product-card-img" src={prodotto.src} alt={prodotto.title} />
+				<p>Pasta {prodotto.type} da {prodotto.time} minuti</p>
+			</div>)}
 		</div>
 	</div>
 }

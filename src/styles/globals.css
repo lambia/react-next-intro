@@ -28,3 +28,7 @@ footer {
 header h1 {
   display: inline;
 }
+
+.product-card-img {
+  height: 6rem;
+}
