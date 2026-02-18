@@ -3,7 +3,9 @@ import Image from "next/image";
 // import styles from "@/styles/Home.module.css";
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import Products from "@/components/Products"
+import ProductsList from "@/components/ProductsList"
+
+import products from "@/data/products";
 
 export default function Home() {
 
@@ -17,7 +19,7 @@ export default function Home() {
       </Head>
       <Header />
       <main>
-        <Products />
+        <ProductsList products={products} />
       </main>
       <Footer />
     </>
